@@ -16,15 +16,15 @@ struct ContentView: View {
     
     @State var inputAmount = "0"
     
-    @State private var inputIndices = Array(repeating: 0, count: FrequencyUnit.allCases.count)
-    @State private var outputIndices = Array(repeating: 0, count: FrequencyUnit.allCases.count)
+    @State private var inputIndices = Array(repeating: 0, count: Frequency.allCases.count)
+    @State private var outputIndices = Array(repeating: 0, count: Frequency.allCases.count)
     
     @State private var inputUnitIndex = 0
     @State private var outputUnitIndex = 0
     
     var outputUnit: String {
         let index = outputIndices[outputUnitIndex]
-        return FrequencyUnit.allCases[index].rawValue
+        return Frequency.allCases[index].rawValue
     }
     
     var inputUnit: String {
@@ -33,15 +33,22 @@ struct ContentView: View {
     }
     
     var conversionResult: Double {
-        let input = UnitFrequency(symbol: UnitInfoProvider.unitSymbol(with: inputUnit))
+        guard let input = UnitInfoProvider.unit(with: inputUnit) else {
+            print("Invalid input unit")
+            return 0
+        }
+        
         let measurement = Measurement(value: Double(inputAmount) ?? 0, unit: input)
-        let outputSymbol = UnitInfoProvider.unitSymbol(with: outputUnit)
-
-        return measurement.converted(to: UnitFrequency(symbol: outputSymbol)).value
+        
+        guard let output = UnitInfoProvider.unit(with: outputUnit) else {
+            print("Invalid output unit")
+            return 0
+        }
+        
+        return measurement.converted(to: output).value
     }
     
     var body: some View {
-        
         NavigationView {
             Form {
                 Section(header: Text("Enter units")) {
@@ -84,8 +91,8 @@ struct ContentView: View {
                 }
                 
             }
+            .navigationBarTitle("Frequency converter")
         }
-        .navigationBarTitle("Time converter")
     }
 }
 

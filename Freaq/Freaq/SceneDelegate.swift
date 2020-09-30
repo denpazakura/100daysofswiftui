@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  Freaq
 //
-//  Created by Diana Komolova on 29/09/2020.
-//  Copyright © 2020 Diana Komolova. All rights reserved.
+//  Created by denpazakura on 29/09/2020.
+//  Copyright © 2020 denpazakura. All rights reserved.
 //
 
 import UIKit
