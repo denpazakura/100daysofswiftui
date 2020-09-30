@@ -1,8 +1,5 @@
 # Working with the Color struct
 
-_# New Document
-
-
 <table>
     <tr>
         <th>
