@@ -37,6 +37,11 @@ struct ContentView: View {
                     
                 }
                 
+                ZStack {
+                    //Color.red
+                    Text("Your content")
+                } .background(Color.red)
+                
                 Section(header: Text("How much tip do you want to leave?")) {
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(0 ..< tipPercentages.count) {
