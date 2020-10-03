@@ -37,15 +37,11 @@ struct ContentView: View {
                     
                 }
                 
-                ZStack {
-                    //Color.red
-                    Text("Your content")
-                } .background(Color.red)
-                
                 Section(header: Text("How much tip do you want to leave?")) {
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(0 ..< tipPercentages.count) {
                             Text("\(self.tipPercentages[$0])%")
+                                .titleStyle()
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
@@ -62,6 +58,7 @@ struct ContentView: View {
                 
                 Section(header: Text("Grand total")) {
                     Text("$\(grandTotal, specifier: "%.2f")")
+                        .titleStyle(color: tipPercentages[tipPercentage] == 0 ? .red : .black)
                 }
             }
             .navigationBarTitle("WeSplit")

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12970D025292B1D00137E31 /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12970CF25292B1D00137E31 /* TextModifier.swift */; };
 		A1F50E1B2520FC330083C99D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F50E1A2520FC330083C99D /* AppDelegate.swift */; };
 		A1F50E1D2520FC330083C99D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F50E1C2520FC330083C99D /* SceneDelegate.swift */; };
 		A1F50E1F2520FC330083C99D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F50E1E2520FC330083C99D /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12970CF25292B1D00137E31 /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		A1F50E172520FC330083C99D /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F50E1A2520FC330083C99D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1F50E1C2520FC330083C99D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				A1F50E252520FC340083C99D /* LaunchScreen.storyboard */,
 				A1F50E282520FC340083C99D /* Info.plist */,
 				A1F50E222520FC340083C99D /* Preview Content */,
+				A12970CF25292B1D00137E31 /* TextModifier.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F50E1B2520FC330083C99D /* AppDelegate.swift in Sources */,
+				A12970D025292B1D00137E31 /* TextModifier.swift in Sources */,
 				A1F50E1D2520FC330083C99D /* SceneDelegate.swift in Sources */,
 				A1F50E1F2520FC330083C99D /* ContentView.swift in Sources */,
 			);

@@ -2,16 +2,14 @@
 //  AppDelegate.swift
 //  WeSplit
 //
-//  Created by Diana Komolova on 27/09/2020.
-//  Copyright © 2020 Diana Komolova. All rights reserved.
+//  Created by denpazakura on 27/09/2020.
+//  Copyright © 2020 denpazakura. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
