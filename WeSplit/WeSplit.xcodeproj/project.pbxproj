@@ -58,6 +58,7 @@
 		A1F50E192520FC330083C99D /* WeSplit */ = {
 			isa = PBXGroup;
 			children = (
+				A12970CF25292B1D00137E31 /* TextModifier.swift */,
 				A1F50E1A2520FC330083C99D /* AppDelegate.swift */,
 				A1F50E1C2520FC330083C99D /* SceneDelegate.swift */,
 				A1F50E1E2520FC330083C99D /* ContentView.swift */,
@@ -65,7 +66,6 @@
 				A1F50E252520FC340083C99D /* LaunchScreen.storyboard */,
 				A1F50E282520FC340083C99D /* Info.plist */,
 				A1F50E222520FC340083C99D /* Preview Content */,
-				A12970CF25292B1D00137E31 /* TextModifier.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
