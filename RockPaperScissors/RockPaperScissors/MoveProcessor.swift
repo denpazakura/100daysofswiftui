@@ -2,8 +2,16 @@
 //  MoveProcessor.swift
 //  RockPaperScissors
 //
-//  Created by Diana Komolova on 06/10/2020.
+//  Created by denpazakura on 06/10/2020.
 //  Copyright © 2020 denpazakura. All rights reserved.
 //
 
-import Foundation
+struct MoveProcessor {
+    func winning(move: Move) -> Move {
+        switch move {
+        case .rock: return .paper
+        case .paper: return .scissors
+        case .scissors: return .rock
+        }
+    }
+}
