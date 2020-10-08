@@ -24,6 +24,10 @@ struct ContentView: View {
         return Calendar.current.date(from: components) ?? Date()
     }
     
+    var bedTime: String {
+        return calculateBedtime()
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -34,7 +38,7 @@ struct ContentView: View {
                     .labelsHidden()
                     .datePickerStyle(WheelDatePickerStyle())
                 
-                VStack {
+                Section {
                     Text("Desired amount of sleep")
                         .font(.headline)
                     
@@ -53,22 +57,19 @@ struct ContentView: View {
                         Text("\(coffeeAmount) cups")
                     }
                 }
+                
+                Section {
+                    Text("Your ideal bedtime is \(bedTime)")
+                        .font(.headline)
+                }
             }
             .navigationBarTitle("BetterRest")
-            .navigationBarItems(trailing:
-                Button(action: calculateBedtime) {
-                    Text("Calculate")
-                }
-            )
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
         } 
     }
 }
 
 private extension ContentView {
-    func calculateBedtime() {
+    func calculateBedtime() -> String {
         let model = SleepCalculator()
         let components = Calendar.current.dateComponents([.hour, .minute], from: wakeUp)
         let hour = (components.hour ?? 0) * 60 * 60
@@ -80,13 +81,12 @@ private extension ContentView {
             
             let formatter = DateFormatter()
             formatter.timeStyle = .short
-            
-            alertMessage = formatter.string(from: sleepTime)
-            alertTitle = "Your ideal bedtime is…"
-            showingAlert = true
+  
+            return formatter.string(from: sleepTime)
             
         } catch (let error) {
             print(error.localizedDescription)
+            return "Something went wrong"
         }
     }
 }
