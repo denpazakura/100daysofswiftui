@@ -17,6 +17,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var currentScore = 0
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -31,6 +33,9 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle(rootWord)
+            .navigationBarItems(leading: Button("Start", action: {
+                self.startGame()
+            }), trailing: Text("Current  score: \(currentScore)"))
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("OK")))
@@ -62,7 +67,19 @@ private extension ContentView {
             return
         }
         
+        guard isNotShort(word: answer) else {
+            wordError(title: "word too short", message: "Your answer must contain at least 3 characters")
+            return
+        }
+        
+        guard isNotRoot(word: answer) else {
+            wordError(title: "this word is the same as the start word", message: "Please type another word")
+            return
+        }
+        
         usedWords.insert(answer, at: 0)
+        
+        currentScore += answer.count
         newWord = ""
     }
     
@@ -101,6 +118,14 @@ private extension ContentView {
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
 
         return misspelledRange.location == NSNotFound
+    }
+    
+    func isNotShort(word: String) -> Bool {
+        return word.count >= 3
+    }
+    
+    func isNotRoot(word: String) -> Bool {
+        return word != rootWord
     }
     
     func wordError(title: String, message: String) {
