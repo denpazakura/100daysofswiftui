@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-enum WordValidationError: Error {
+enum WordValidationError: LocalizedError {
     case wordNotOriginal
     case wordNotPossible
     case wordNotReal
@@ -25,6 +25,16 @@ extension WordValidationError {
         case .wordNotReal: return "Word not possible "
         case .wordTooShort: return "This word is too short"
         case .wordIsRoot: return "This word is the same as the start word"
+        }
+    }
+    
+    var recoverySuggestion: String? {
+        switch self {
+        case .wordNotOriginal: return "Be more original"
+        case .wordNotPossible: return "You can't just make them up, you know!"
+        case .wordNotReal: return "That isn't a real word. "
+        case .wordTooShort: return "Your answer must contain at least 3 characters"
+        case .wordIsRoot: return "Please type another word"
         }
     }
 }
@@ -48,11 +58,12 @@ class WordChecker: WordValidator {
     
     
     func setupValidationRules(word: String) {
-        validators.append(isOriginal(word: word))
+        validators.append(isNotShort(word: word))
         validators.append(isPossible(word: word))
         validators.append(isReal(word: word))
+
+        validators.append(isOriginal(word: word))
         validators.append(isNotRoot(word: word))
-        validators.append(isNotShort(word: word))
     }
     
     func isValid(word: String) -> [(Bool, WordValidationError?)] {

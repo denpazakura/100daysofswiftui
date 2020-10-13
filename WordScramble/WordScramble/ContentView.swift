@@ -53,16 +53,17 @@ private extension ContentView {
         }
         
         let wordChecker = WordChecker(dictionary: usedWords, rootWord: rootWord)
+        wordChecker.usedWords = usedWords
         
         let result = wordChecker.isValid(word: answer)
         
-        guard let validationError = result.filter({ $0.1 != nil }).first else {
+        guard let validationError = result.filter({ $0.1 != nil }).first?.1 else {
             usedWords.insert(answer, at: 0)
             currentScore += answer.count
             newWord = ""
             return
         }
-        wordError(title: validationError.1?.localizedDescription ?? "", message: "")
+        wordError(title: validationError.localizedDescription, message: validationError.recoverySuggestion ?? "")
     }
     
     func startGame() {

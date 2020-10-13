@@ -64,11 +64,11 @@
 				A12C6802253104FD003A9804 /* AppDelegate.swift */,
 				A12C6804253104FD003A9804 /* SceneDelegate.swift */,
 				A12C6806253104FD003A9804 /* ContentView.swift */,
+				A1782C6B2534F85C003D9472 /* WordValidator.swift */,
 				A12C680825310500003A9804 /* Assets.xcassets */,
 				A12C680D25310500003A9804 /* LaunchScreen.storyboard */,
 				A12C681025310500003A9804 /* Info.plist */,
 				A12C680A25310500003A9804 /* Preview Content */,
-				A1782C6B2534F85C003D9472 /* WordValidator.swift */,
 			);
 			path = WordScramble;
 			sourceTree = "<group>";
