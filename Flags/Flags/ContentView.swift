@@ -20,6 +20,8 @@ struct ContentView: View {
     
     @State private var currentScore = 0
     
+    @State private var animate = false
+    
     var body: some View {
         
         ZStack {
@@ -37,10 +39,14 @@ struct ContentView: View {
                 
                 ForEach(0 ..< 3) { number in
                     Button(action: {
+                        self.animate = true
+                        
                         self.flagTapped(number)
                     }) {
                         FlagImage(country: self.countries[number].lowercased())
                     }
+                    .rotation3DEffect(.degrees(number == self.correctAnswer && self.animate ? 180 : 0.0), axis: (x: 0, y: 1, z: 0))
+                    .opacity(number != self.correctAnswer && self.animate ? 0.25 : 1)
                     Spacer()
                 }
                 
