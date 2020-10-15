@@ -57,7 +57,7 @@ private extension ContentView {
         
         let result = wordChecker.isValid(word: answer)
         
-        guard let validationError = result.filter({ $0.1 != nil }).first?.1 else {
+        guard let validationError = result.filter({ $0.error != nil }).first?.error else {
             usedWords.insert(answer, at: 0)
             currentScore += answer.count
             newWord = ""
