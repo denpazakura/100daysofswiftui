@@ -8,9 +8,15 @@
 
 import SwiftUI
 
+struct Question {
+    var correctAnswer: Int
+}
+
 struct ContentView: View {
+    @State private var currentScore = 0
+    
     var body: some View {
-        Text("Hello, World!")
+        
     }
 }
 
