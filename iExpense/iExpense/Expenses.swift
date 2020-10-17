@@ -10,4 +10,16 @@ import Foundation
 
 class Expenses: ObservableObject {
     @Published var items = [ExpenseItem]()
+    
+    init() {
+        if let items = UserDefaults.standard.data(forKey: "Items") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([ExpenseItem].self, from: items) {
+                self.items = decoded
+                return
+            }
+        }
+
+        self.items = []
+    }
 }

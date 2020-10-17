@@ -66,12 +66,11 @@
 				A1145ABE253AFA40003F69BA /* ExpenseItem.swift */,
 				A1145AC0253AFA9D003F69BA /* Expenses.swift */,
 				A1145AAC253A4ADB003F69BA /* SceneDelegate.swift */,
-				A1145AAE253A4ADB003F69BA /* ContentView.swift */,
+				A1145AC4253B4E01003F69BA /* View */,
 				A1145AB0253A4ADE003F69BA /* Assets.xcassets */,
 				A1145AB5253A4ADE003F69BA /* LaunchScreen.storyboard */,
 				A1145AB8253A4ADE003F69BA /* Info.plist */,
 				A1145AB2253A4ADE003F69BA /* Preview Content */,
-				A1145AC2253B020E003F69BA /* AddView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -82,6 +81,15 @@
 				A1145AB3253A4ADE003F69BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1145AC4253B4E01003F69BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1145AC2253B020E003F69BA /* AddView.swift */,
+				A1145AAE253A4ADB003F69BA /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
