@@ -8,11 +8,6 @@
 
 import SwiftUI
 
-class User: ObservableObject {
-   @Published var firstName = "Bilbo"
-   @Published var lastName = "Baggins"
-}
-
 struct SecondView: View {
     var name: String
 
@@ -22,16 +17,30 @@ struct SecondView: View {
 }
 
 struct ContentView: View {
-    @State private var showingSheet = false
+    @ObservedObject var expenses = Expenses()
     
-    @ObservedObject var user = User()
-    
+    @State private var showingAddExpense = false
+
     var body: some View {
-        Button("Show Sheet") {
-            self.showingSheet.toggle()
-        }
-        .sheet(isPresented: $showingSheet) {
-            SecondView(name: "@twostraws")
+       
+        NavigationView {
+            List {
+                ForEach(expenses.items, id: \.id) { item in
+                    Text(item.name)
+                }
+                .onDelete(perform: removeItems)
+            }
+            .navigationBarTitle("iExpense")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showingAddExpense = true
+                }) {
+                    Image(systemName: "plus")
+                }
+            )
+            .sheet(isPresented: $showingAddExpense) {
+                AddView(expenses: self.expenses)
+            }
         }
     }
 }
@@ -39,5 +48,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+private extension ContentView {
+    func removeItems(at offsets: IndexSet) {
+        expenses.items.remove(atOffsets: offsets)
     }
 }
