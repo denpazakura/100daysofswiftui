@@ -8,14 +8,6 @@
 
 import SwiftUI
 
-struct SecondView: View {
-    var name: String
-
-    var body: some View {
-        Text("Hello, \(name)!")
-    }
-}
-
 struct ContentView: View {
     @ObservedObject var expenses = Expenses()
     
@@ -34,8 +26,7 @@ struct ContentView: View {
                         }
 
                         Spacer()
-                        Text("$\(item.amount)")
-                    }
+                    }.style(expense: item.amount)
                 }
                 .onDelete(perform: removeItems)
             }

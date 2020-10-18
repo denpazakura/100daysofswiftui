@@ -16,6 +16,8 @@ struct AddView: View {
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = ""
+    
+    @State private var showingAlert = false
 
     static let types = ["Business", "Personal"]
 
@@ -33,12 +35,21 @@ struct AddView: View {
             }
             .navigationBarTitle("Add new expense")
             .navigationBarItems(trailing: Button("Save") {
-                if let actualAmount = Int(self.amount) {
+                
+                guard let actualAmount = Int(self.amount) else {
+                    self.showingAlert = true
+                    return
+                }
+                
                     let item = ExpenseItem(name: self.name, type: self.type, amount: actualAmount)
                     self.expenses.items.append(item)
                     self.presentationMode.wrappedValue.dismiss()
-                }
+              
             })
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Please enter an integer"), dismissButton: .default(Text("Dismiss")) {
+                })
         }
     }
 }
