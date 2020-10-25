@@ -74,7 +74,7 @@
 		A1145AD6253DBB39003F69BA /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
-				A1692C6E2544BD57005BDE65 /* DataProvider.swift */,
+				A1692C7225461EE0005BDE65 /* DataService */,
 				A1145AED253DF4DF003F69BA /* astronauts.json */,
 				A1145AEE253DF4DF003F69BA /* missions.json */,
 				A183B914253F840A00ED1952 /* Model */,
@@ -96,6 +96,14 @@
 				A1145AE0253DBB3B003F69BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1692C7225461EE0005BDE65 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				A1692C6E2544BD57005BDE65 /* DataProvider.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 		A183B914253F840A00ED1952 /* Model */ = {
