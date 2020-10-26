@@ -14,6 +14,7 @@
 		A1692C89254636F7005BDE65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1692C88254636F7005BDE65 /* Preview Assets.xcassets */; };
 		A1692C8C254636F7005BDE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1692C8A254636F7005BDE65 /* LaunchScreen.storyboard */; };
 		A1692C9425463759005BDE65 /* Trapezoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1692C9325463759005BDE65 /* Trapezoid.swift */; };
+		A1692C962546DDDA005BDE65 /* Checkerboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1692C952546DDDA005BDE65 /* Checkerboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A1692C8B254636F7005BDE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1692C8D254636F7005BDE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1692C9325463759005BDE65 /* Trapezoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezoid.swift; sourceTree = "<group>"; };
+		A1692C952546DDDA005BDE65 /* Checkerboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkerboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,7 @@
 		A1692C7E254636F4005BDE65 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
-				A1692C9325463759005BDE65 /* Trapezoid.swift */,
+				A1692C972546DDE4005BDE65 /* Shapes */,
 				A1692C7F254636F4005BDE65 /* AppDelegate.swift */,
 				A1692C81254636F4005BDE65 /* SceneDelegate.swift */,
 				A1692C83254636F4005BDE65 /* ContentView.swift */,
@@ -76,6 +78,15 @@
 				A1692C88254636F7005BDE65 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1692C972546DDE4005BDE65 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				A1692C9325463759005BDE65 /* Trapezoid.swift */,
+				A1692C952546DDDA005BDE65 /* Checkerboard.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1692C9425463759005BDE65 /* Trapezoid.swift in Sources */,
+				A1692C962546DDDA005BDE65 /* Checkerboard.swift in Sources */,
 				A1692C80254636F4005BDE65 /* AppDelegate.swift in Sources */,
 				A1692C82254636F4005BDE65 /* SceneDelegate.swift in Sources */,
 				A1692C84254636F4005BDE65 /* ContentView.swift in Sources */,

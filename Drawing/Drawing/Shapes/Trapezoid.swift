@@ -10,6 +10,11 @@ import SwiftUI
 
 struct Trapezoid: Shape {
     var insetAmount: CGFloat
+    
+    var animatableData: CGFloat {
+        get { insetAmount }
+        set { self.insetAmount = newValue }
+    }
 
     func path(in rect: CGRect) -> Path {
         var path = Path()
