@@ -14,6 +14,8 @@ struct ContentView: View {
     @State private var rows = 4
     @State private var columns = 4
     
+    @State private var arrowWidth = 0.5
+    
     var body: some View {
 //        Trapezoid(insetAmount: insetAmount)
 //            .frame(width: 200, height: 100)
@@ -23,14 +25,24 @@ struct ContentView: View {
 //                }
 //        }
         
+//
+//        Checkerboard(rows: rows, columns: columns)
+//            .onTapGesture {
+//                withAnimation(.linear(duration: 3)) {
+//                    self.rows = 8
+//                    self.columns = 16
+//                }
+//            }
         
-        Checkerboard(rows: rows, columns: columns)
-            .onTapGesture {
-                withAnimation(.linear(duration: 3)) {
-                    self.rows = 8
-                    self.columns = 16
-                }
+        VStack {
+            Arrow(width: arrowWidth)
+                .frame(width: 40, height: 100)
+                .onTapGesture {
+                    withAnimation {
+                        self.arrowWidth += 0.5
+                    }
             }
+        }
     }
 }
 

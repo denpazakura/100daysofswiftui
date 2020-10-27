@@ -12,7 +12,7 @@ struct Checkerboard: Shape {
     var rows: Int
     var columns: Int
     
-    public var animatableData: AnimatablePair<Double, Double> {
+    var animatableData: AnimatablePair<Double, Double> {
         get {
             AnimatablePair(Double(rows), Double(columns))
         }
