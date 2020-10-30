@@ -9,8 +9,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var activitiesRepository = ActivityRepository()
+    
+    @State private var showingAddExpense = false
+
     var body: some View {
-        Text("Hello, World!")
+       
+        NavigationView {
+            List {
+               ForEach(activitiesRepository.items) { item in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(item.name)
+                                .font(.headline)
+                            Text(item.description)
+                        }
+                        Spacer()
+                    }
+                }
+            }
+            .navigationBarTitle("Habit Tracker")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showingAddExpense = true
+                }) {
+                    Image(systemName: "plus")
+                }
+            )
+            .sheet(isPresented: $showingAddExpense) {
+                AddView(activityRepository: self.activitiesRepository)
+            }
+        }
     }
 }
 

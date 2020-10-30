@@ -11,8 +11,7 @@ import SwiftUI
 struct Activity: Codable, Identifiable {
     let name: String
     let description: String
-    
-    let id: Int
+    let id = UUID()
     let date: Date?
 }
 

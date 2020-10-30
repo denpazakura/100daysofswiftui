@@ -14,6 +14,8 @@
 		A1692CD5254A279A005BDE65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1692CD4254A279A005BDE65 /* Preview Assets.xcassets */; };
 		A1692CD8254A279A005BDE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1692CD6254A279A005BDE65 /* LaunchScreen.storyboard */; };
 		A1692CE0254B562E005BDE65 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1692CDF254B562E005BDE65 /* Activity.swift */; };
+		A1FA10D6254CAD19007EB439 /* ActivityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA10D5254CAD19007EB439 /* ActivityRepository.swift */; };
+		A1FA10D8254CAEF0007EB439 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA10D7254CAEF0007EB439 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A1692CD7254A279A005BDE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1692CD9254A279A005BDE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1692CDF254B562E005BDE65 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		A1FA10D5254CAD19007EB439 /* ActivityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRepository.swift; sourceTree = "<group>"; };
+		A1FA10D7254CAEF0007EB439 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		A1692CC7254A2799005BDE65 /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A1FA10D5254CAD19007EB439 /* ActivityRepository.swift */,
 				A1692CDF254B562E005BDE65 /* Activity.swift */,
 				A1692CC8254A2799005BDE65 /* AppDelegate.swift */,
 				A1692CCA254A2799005BDE65 /* SceneDelegate.swift */,
@@ -66,6 +71,7 @@
 				A1692CD6254A279A005BDE65 /* LaunchScreen.storyboard */,
 				A1692CD9254A279A005BDE65 /* Info.plist */,
 				A1692CD3254A279A005BDE65 /* Preview Content */,
+				A1FA10D7254CAEF0007EB439 /* AddView.swift */,
 			);
 			path = HabitTracker;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1692CC9254A2799005BDE65 /* AppDelegate.swift in Sources */,
+				A1FA10D6254CAD19007EB439 /* ActivityRepository.swift in Sources */,
+				A1FA10D8254CAEF0007EB439 /* AddView.swift in Sources */,
 				A1692CCB254A2799005BDE65 /* SceneDelegate.swift in Sources */,
 				A1692CE0254B562E005BDE65 /* Activity.swift in Sources */,
 				A1692CD0254A2799005BDE65 /* ContentView.swift in Sources */,
