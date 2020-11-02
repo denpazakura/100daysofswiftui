@@ -10,7 +10,9 @@ import SwiftUI
 
 struct AddressView: View {
     @ObservedObject var order: Order
-    
+            
+    var addressToValidate = ""
+
     var body: some View {
         Form {
             Section {
@@ -21,14 +23,13 @@ struct AddressView: View {
             }
             
             Section {
-                NavigationLink(destination: CheckoutView(order: order)) {
+                NavigationLink(destination: CheckoutView(order: order, requestFactory: NetworkRequestFactory())) {
                     Text("Check out")
                 }
             }
             .disabled(order.hasValidAddress == false)
         }
         .navigationBarTitle("Delivery details", displayMode: .inline)
-        
     }
 }
 

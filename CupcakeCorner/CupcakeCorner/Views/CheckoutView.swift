@@ -14,6 +14,13 @@ struct CheckoutView: View {
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
     
+    private var requestFactory: NetworkRequestFactory!
+    
+    init(order: Order, requestFactory: NetworkRequestFactory) {
+        self.order = order
+        self.requestFactory = requestFactory
+    }
+    
     var body: some View {
         GeometryReader { geo in
             ScrollView {
@@ -48,17 +55,14 @@ private extension CheckoutView {
         }
         
         let url = URL(string: "https://reqres.in/api/cupcakes")!
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = encoded
+        let request = requestFactory.makePostRequest(for: url, encodedData: encoded)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
-                print("No data in response: \(error?.localizedDescription ?? "Unknown error").")
+                if let err = error { handleError(error: err) }
                 return
             }
-            
+                        
             if let decodedOrder = try? JSONDecoder().decode(Order.self, from: data) {
                 self.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
                 self.showingConfirmation = true
@@ -68,10 +72,14 @@ private extension CheckoutView {
             
         }.resume()
     }
+    
+    func handleError(error: Error) {
+        //no wifi alert if code is 1009
+    }
 }
 
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutView(order: Order())
+        CheckoutView(order: Order(), requestFactory: NetworkRequestFactory())
     }
 }

@@ -10,6 +10,7 @@
 		A1835B08254DBE3C003C7852 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1835B07254DBE3C003C7852 /* Order.swift */; };
 		A1835B0A254DC31D003C7852 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1835B09254DC31D003C7852 /* AddressView.swift */; };
 		A1835B0C254DC369003C7852 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1835B0B254DC369003C7852 /* CheckoutView.swift */; };
+		A1E5425E25509C8500804546 /* NetworkRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5425D25509C8500804546 /* NetworkRequestFactory.swift */; };
 		A1FA10E6254CB179007EB439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA10E5254CB179007EB439 /* AppDelegate.swift */; };
 		A1FA10E8254CB179007EB439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA10E7254CB179007EB439 /* SceneDelegate.swift */; };
 		A1FA10EA254CB179007EB439 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA10E9254CB179007EB439 /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 		A1835B07254DBE3C003C7852 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A1835B09254DC31D003C7852 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		A1835B0B254DC369003C7852 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		A1E5425D25509C8500804546 /* NetworkRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestFactory.swift; sourceTree = "<group>"; };
 		A1FA10E2254CB179007EB439 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FA10E5254CB179007EB439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1FA10E7254CB179007EB439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1E5425B25509C2400804546 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1FA10E9254CB179007EB439 /* ContentView.swift */,
+				A1835B09254DC31D003C7852 /* AddressView.swift */,
+				A1835B07254DBE3C003C7852 /* Order.swift */,
+				A1835B0B254DC369003C7852 /* CheckoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1E5426125509FE500804546 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A1FA10F9254CB5BF007EB439 /* Result.swift */,
+				A1E5425D25509C8500804546 /* NetworkRequestFactory.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A1FA10D9254CB179007EB439 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +86,10 @@
 		A1FA10E4254CB179007EB439 /* CupcakeCorner */ = {
 			isa = PBXGroup;
 			children = (
-				A1835B09254DC31D003C7852 /* AddressView.swift */,
-				A1835B07254DBE3C003C7852 /* Order.swift */,
-				A1835B0B254DC369003C7852 /* CheckoutView.swift */,
+				A1E5425B25509C2400804546 /* Views */,
 				A1FA10E5254CB179007EB439 /* AppDelegate.swift */,
 				A1FA10E7254CB179007EB439 /* SceneDelegate.swift */,
-				A1FA10F9254CB5BF007EB439 /* Result.swift */,
-				A1FA10E9254CB179007EB439 /* ContentView.swift */,
+				A1E5426125509FE500804546 /* Network */,
 				A1FA10EB254CB17B007EB439 /* Assets.xcassets */,
 				A1FA10F0254CB17B007EB439 /* LaunchScreen.storyboard */,
 				A1FA10F3254CB17B007EB439 /* Info.plist */,
@@ -159,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1FA10E6254CB179007EB439 /* AppDelegate.swift in Sources */,
+				A1E5425E25509C8500804546 /* NetworkRequestFactory.swift in Sources */,
 				A1FA10E8254CB179007EB439 /* SceneDelegate.swift in Sources */,
 				A1835B08254DBE3C003C7852 /* Order.swift in Sources */,
 				A1835B0C254DC369003C7852 /* CheckoutView.swift in Sources */,

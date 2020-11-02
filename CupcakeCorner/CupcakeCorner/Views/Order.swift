@@ -29,7 +29,7 @@ class Order: ObservableObject, Codable {
             }
         }
     }
-    
+            
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
@@ -76,7 +76,7 @@ class Order: ObservableObject, Codable {
 
 extension Order {
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.filter({ !$0.isWhitespace }).isEmpty || streetAddress.filter({ !$0.isWhitespace }).isEmpty || city.filter({ !$0.isWhitespace }).isEmpty || zip.filter({ !$0.isWhitespace }).isEmpty {
             return false
         }
 
