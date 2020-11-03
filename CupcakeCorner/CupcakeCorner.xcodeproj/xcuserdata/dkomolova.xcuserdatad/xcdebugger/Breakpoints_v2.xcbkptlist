@@ -3,4 +3,70 @@
    uuid = "C8CC1F71-756B-43F2-8F19-0CF6E554186D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96F72470-D4B8-4A6E-9F6F-C431CEBF9B17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CupcakeCorner/Views/CheckoutView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "placeOrder()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "96F72470-D4B8-4A6E-9F6F-C431CEBF9B17 - 5bb8a653ab2af92d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CupcakeCorner.CheckoutView.(placeOrder in _B593161932BAA8F21004D1F873608E11)() -&gt; ()"
+                  moduleName = "CupcakeCorner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dkomolova/Desktop/SwiftUI100/CupcakeCorner/CupcakeCorner/Views/CheckoutView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1169">
+               </Location>
+               <Location
+                  uuid = "96F72470-D4B8-4A6E-9F6F-C431CEBF9B17 - 2b8fc285ded2afed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CupcakeCorner.CheckoutView.(placeOrder in _B593161932BAA8F21004D1F873608E11)() -&gt; ()"
+                  moduleName = "CupcakeCorner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dkomolova/Desktop/SwiftUI100/CupcakeCorner/CupcakeCorner/Views/CheckoutView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "231">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F81C4C4A-AB99-4D6A-9C40-70E630F36BD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CupcakeCorner/Views/CheckoutView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "placeOrder()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

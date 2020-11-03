@@ -13,7 +13,8 @@ struct CheckoutView: View {
     
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
-    
+    @State private var showingNoConnectionAlert = false
+        
     private var requestFactory: NetworkRequestFactory!
     
     init(order: Order, requestFactory: NetworkRequestFactory) {
@@ -43,6 +44,9 @@ struct CheckoutView: View {
         .navigationBarTitle("Check out", displayMode: .inline)
         .alert(isPresented: $showingConfirmation) {
             Alert(title: Text("Thank you!"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $showingNoConnectionAlert) {
+            Alert(title: Text("Seems like you're offline"), message: Text("Check your internet connection"), dismissButton: .default(Text("OK")))
         }
     }
 }
@@ -74,7 +78,9 @@ private extension CheckoutView {
     }
     
     func handleError(error: Error) {
-        //no wifi alert if code is 1009
+        if (error as NSError).code == NSURLErrorNotConnectedToInternet {
+            showingNoConnectionAlert = true
+        }
     }
 }
 
