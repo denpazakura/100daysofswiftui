@@ -35,7 +35,9 @@ struct DetailView: View {
                 Text(self.book.author ?? "Unknown author")
                     .font(.title)
                     .foregroundColor(.secondary)
-
+                Text(self.book.date?.prettyFormatted ?? "n/a")
+                    .font(.title)
+                    .foregroundColor(.secondary)
                 Text(self.book.review ?? "No review")
                     .padding()
 
@@ -66,6 +68,14 @@ private extension DetailView {
         // uncomment this line if you want to make the deletion permanent
         try? self.moc.save()
         presentationMode.wrappedValue.dismiss()
+    }
+}
+
+private extension Date {
+    var prettyFormatted: String {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            return formatter.string(from: self)
     }
 }
 

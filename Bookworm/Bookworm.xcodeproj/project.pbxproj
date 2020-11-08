@@ -107,14 +107,13 @@
 		A1E5427325515DAB00804546 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
+				A1E5427D25515DAE00804546 /* Persistence.swift */,
 				A1E5427425515DAB00804546 /* BookwormApp.swift */,
 				A1FD77792556EFAB0062C445 /* Views */,
 				A1E5427825515DAE00804546 /* Assets.xcassets */,
-				A1E5427D25515DAE00804546 /* Persistence.swift */,
 				A1E5428225515DAE00804546 /* Info.plist */,
 				A1E5427F25515DAE00804546 /* Bookworm.xcdatamodeld */,
 				A1E5427A25515DAE00804546 /* Preview Content */,
-				A1E542CB2554B1B900804546 /* EmojiRatingView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -150,6 +149,7 @@
 			children = (
 				A1E542BE2554AB8600804546 /* AddBookView.swift */,
 				A1FD77742556EE090062C445 /* DetailView.swift */,
+				A1E542CB2554B1B900804546 /* EmojiRatingView.swift */,
 				A1E5427625515DAB00804546 /* ContentView.swift */,
 				A1E542C32554B0E500804546 /* RatingView.swift */,
 			);

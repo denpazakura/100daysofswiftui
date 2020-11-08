@@ -17,6 +17,7 @@ struct AddBookView: View {
     @State private var genre = ""
     @State private var review = ""
     
+    @State private var showNoGenreAlert = false
     @State private var showingAddScreen = false
     
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
@@ -42,18 +43,32 @@ struct AddBookView: View {
                 
                 Section {
                     Button("Save") {
-                        let newBook = Book(context: self.moc)
-                        newBook.title = self.title
-                        newBook.author = self.author
-                        newBook.rating = Int16(self.rating)
-                        newBook.genre = self.genre
-                        newBook.review = self.review
-                        
-                        try? self.moc.save()
+                        self.saveBook()
                     }
                 }
             }
             .navigationBarTitle("Add Book")
+            .alert(isPresented: $showNoGenreAlert) {
+                Alert.init(title: Text("No genre selected"), message: Text("Please select any genre"), dismissButton: .default(Text("OK")))
+            }
+        }
+    }
+}
+
+private extension AddBookView {
+    func saveBook() {
+        let newBook = Book(context: self.moc)
+        newBook.title = self.title
+        newBook.author = self.author
+        newBook.rating = Int16(self.rating)
+        newBook.genre = self.genre
+        newBook.review = self.review
+        newBook.date = Date()
+        
+        if self.genre.isEmpty {
+            showNoGenreAlert = true
+        } else {
+            try? self.moc.save()
         }
     }
 }
