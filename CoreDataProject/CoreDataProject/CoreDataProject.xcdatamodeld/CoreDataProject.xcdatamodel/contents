@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Candy" representedClassName="Candy" syncable="YES">
+        <attribute name="name" optional="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="shortName" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Movie" representedClassName="Movie" syncable="YES">
         <attribute name="director" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Ship" representedClassName="Ship" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="universe" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Singer" representedClassName="Singer" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Movie" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Singer" positionX="-63" positionY="9" width="128" height="73"/>
+        <element name="Ship" positionX="-54" positionY="18" width="128" height="73"/>
+        <element name="Country" positionX="-36" positionY="36" width="128" height="73"/>
+        <element name="Candy" positionX="-18" positionY="45" width="128" height="58"/>
     </elements>
 </model>
