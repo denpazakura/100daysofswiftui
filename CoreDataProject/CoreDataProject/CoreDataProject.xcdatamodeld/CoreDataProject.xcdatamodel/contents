@@ -7,7 +7,7 @@
     <entity name="Country" representedClassName="Country" syncable="YES">
         <attribute name="fullName" optional="YES" attributeType="String"/>
         <attribute name="shortName" optional="YES" attributeType="String"/>
-        <relationship name="candy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="candy" inverseEntity="Country"/>
+        <relationship name="candy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country"/>
     </entity>
     <entity name="Movie" representedClassName="Movie" syncable="YES">
         <attribute name="director" optional="YES" attributeType="String"/>
