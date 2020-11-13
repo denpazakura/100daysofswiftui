@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let serviceProvider = DataServiceProvider(service: FriendfaceService())
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
