@@ -13,7 +13,7 @@ enum ServiceMethod: String {
 
 protocol DataService {
     var baseURL: String { get }
-    var path: String { get }
+    var path: String? { get }
     var parameters: [String: Any]? { get }
     var method: ServiceMethod { get }
 }
@@ -30,6 +30,6 @@ extension DataService {
     }
     
     private var url: URL? {
-        URLFactory().makeURL(method: method, baseURL: baseURL, path: path, parameters: parameters)
+        return URL(string: baseURL)
     }
 }
