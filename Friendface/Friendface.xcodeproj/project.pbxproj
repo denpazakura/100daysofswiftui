@@ -12,7 +12,6 @@
 		A14E4B0B255DCF50002F94E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14E4B0A255DCF50002F94E5 /* Assets.xcassets */; };
 		A14E4B0E255DCF50002F94E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14E4B0D255DCF50002F94E5 /* Preview Assets.xcassets */; };
 		A14E4B17255DCF9F002F94E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E4B16255DCF9F002F94E5 /* User.swift */; };
-		A14E4B1A255DCFD5002F94E5 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E4B19255DCFD5002F94E5 /* Friend.swift */; };
 		A14E4B5C255F26A5002F94E5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E4B5B255F26A5002F94E5 /* DataService.swift */; };
 		A14E4B5F255F2C9F002F94E5 /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E4B5E255F2C9F002F94E5 /* URLFactory.swift */; };
 		A14E4B67255F2FCD002F94E5 /* DataServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E4B66255F2FCD002F94E5 /* DataServiceProvider.swift */; };
@@ -27,7 +26,6 @@
 		A14E4B0D255DCF50002F94E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A14E4B0F255DCF50002F94E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A14E4B16255DCF9F002F94E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A14E4B19255DCFD5002F94E5 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		A14E4B5B255F26A5002F94E5 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A14E4B5E255F2C9F002F94E5 /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
 		A14E4B66255F2FCD002F94E5 /* DataServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProvider.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				A14E4B69255F2FD8002F94E5 /* NetworkLayer */,
-				A14E4B19255DCFD5002F94E5 /* Friend.swift */,
 				A14E4B66255F2FCD002F94E5 /* DataServiceProvider.swift */,
 				A14E4B16255DCF9F002F94E5 /* User.swift */,
 				A14E4B06255DCF4E002F94E5 /* FriendfaceApp.swift */,
@@ -170,7 +167,6 @@
 				A14E4B5F255F2C9F002F94E5 /* URLFactory.swift in Sources */,
 				A14E4B17255DCF9F002F94E5 /* User.swift in Sources */,
 				A14E4B6C255F3543002F94E5 /* FriendfaceService.swift in Sources */,
-				A14E4B1A255DCFD5002F94E5 /* Friend.swift in Sources */,
 				A14E4B5C255F26A5002F94E5 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

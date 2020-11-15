@@ -7,17 +7,19 @@
 
 import Foundation
 
-struct User: Codable {
-    var id: String
-    var isActive: Bool?
-    var name: String
-    var age: Int?
-    var company: String?
-    var email: String?
-    var address: String?
-    var about: String?
-    var registered: Date
+struct User: Decodable {
+    let id: String
+    let isActive: Bool
+    let name: String
+    let age: Int
+    let company, email, address, about: String
+    let registered: Date
+    let tags: [String]
     
-    var tags: [String]
-    var friends: [Friend]
+    let friends: [Friend]
+    
+    struct Friend: Decodable {
+        let id: String
+        let name: String
+    }
 }

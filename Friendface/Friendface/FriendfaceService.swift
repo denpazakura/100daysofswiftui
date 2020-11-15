@@ -9,7 +9,7 @@ import Foundation
 
 struct FriendfaceService: DataService {
     var baseURL: String {
-        return "https://www.hackingwithswift.com/samples/friendface.json/"
+        return "https://www.hackingwithswift.com/samples/friendface.json"
     }
     
     var path: String? {
