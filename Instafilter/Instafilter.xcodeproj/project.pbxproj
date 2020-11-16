@@ -11,6 +11,8 @@
 		A14E4B8425608A0A002F94E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14E4B8325608A0A002F94E5 /* ContentView.swift */; };
 		A14E4B8625608A0C002F94E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14E4B8525608A0C002F94E5 /* Assets.xcassets */; };
 		A14E4B8925608A0C002F94E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14E4B8825608A0C002F94E5 /* Preview Assets.xcassets */; };
+		A1BC98B925631CC6008853A9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC98B825631CC6008853A9 /* ImagePicker.swift */; };
+		A1BC98BD2563255F008853A9 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC98BC2563255F008853A9 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		A14E4B8525608A0C002F94E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14E4B8825608A0C002F94E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A14E4B8A25608A0C002F94E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BC98B825631CC6008853A9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		A1BC98BC2563255F008853A9 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		A14E4B8025608A0A002F94E5 /* Instafilter */ = {
 			isa = PBXGroup;
 			children = (
+				A1BC98B825631CC6008853A9 /* ImagePicker.swift */,
+				A1BC98BC2563255F008853A9 /* ImageSaver.swift */,
 				A14E4B8125608A0A002F94E5 /* InstafilterApp.swift */,
 				A14E4B8325608A0A002F94E5 /* ContentView.swift */,
 				A14E4B8525608A0C002F94E5 /* Assets.xcassets */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BC98B925631CC6008853A9 /* ImagePicker.swift in Sources */,
 				A14E4B8425608A0A002F94E5 /* ContentView.swift in Sources */,
 				A14E4B8225608A0A002F94E5 /* InstafilterApp.swift in Sources */,
+				A1BC98BD2563255F008853A9 /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
