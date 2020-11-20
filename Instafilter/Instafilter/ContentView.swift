@@ -19,6 +19,9 @@ struct ContentView: View {
     
     @State private var currentFilter: CIFilter = CIFilter.sepiaTone()
     @State private var filterIntensity = 0.5
+    @State private var filterRadius = 0.5
+    
+    @State private var showNoImageErrorAlert = false
     
     
     let context = CIContext()
@@ -34,11 +37,19 @@ struct ContentView: View {
             }
         )
         
+        let radius = Binding<Double>(
+            get: { self.filterRadius },
+            set: {
+                self.filterRadius = $0
+                self.applyProcessing()
+            }
+        )
+        
         NavigationView {
             VStack {
                 ZStack {
                     Rectangle()
-                        .fill(Color.secondary)
+                        .fill(Color.black)
                     if image != nil {
                         image?
                             .resizable()
@@ -53,20 +64,36 @@ struct ContentView: View {
                     self.showingImagePicker = true
                 }
                 
-                HStack {
-                    Text("Intensity")
-                    Slider(value: intensity)
+                VStack {
+                    if currentFilter.inputKeys.contains(kCIInputIntensityKey) {
+                        HStack {
+                            Text("Intensity")
+                            Slider(value: intensity)
+                        }
+                    }
+                    
+                    if currentFilter.inputKeys.contains(kCIInputRadiusKey) {
+                        HStack {
+                            ZStack(alignment: .leading) {
+                                Text("Radius")
+                            }
+                            Slider(value: radius)
+                        }
+                    }
                 }.padding(.vertical)
                 
                 HStack {
-                    Button("Change Filter") {
+                    Button(currentFilter.name) {
                         self.showingFilterSheet = true
                     }
                     
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
+                        guard let processedImage = self.processedImage else {
+                            showNoImageErrorAlert = true
+                            return
+                        }
                         
                         let imageSaver = ImageSaver()
                         imageSaver.writeToPhotoAlbum(image: processedImage)                    }
@@ -89,6 +116,11 @@ struct ContentView: View {
                     .cancel()
                 ])
             }
+            .alert(isPresented: $showNoImageErrorAlert) {
+                Alert.init(title: Text("No image to save"),
+                           message: Text("Please select an image"),
+                           dismissButton: .cancel())
+            }
         }
     }
 }
@@ -96,7 +128,7 @@ struct ContentView: View {
 private extension ContentView {
     func loadImage() {
         guard let inputImage = inputImage else { return }
-
+        
         let beginImage = CIImage(image: inputImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         applyProcessing()
@@ -107,9 +139,14 @@ private extension ContentView {
         if inputKeys.contains(kCIInputIntensityKey) {
             currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey)
         }
-
-        guard let outputImage = currentFilter.outputImage else { return }
-
+        if inputKeys.contains(kCIInputRadiusKey) {
+            currentFilter.setValue(filterRadius * 200, forKey: kCIInputRadiusKey)
+        }
+        
+        guard let outputImage = currentFilter.outputImage else {
+            return
+        }
+        
         if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
             let uiImage = UIImage(cgImage: cgImage)
             image = Image(uiImage: uiImage)
