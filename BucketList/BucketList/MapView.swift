@@ -88,6 +88,28 @@ extension MKPointAnnotation {
     }
 }
 
+extension MKPointAnnotation: ObservableObject {
+    public var wrappedTitle: String {
+        get {
+            self.title ?? "Unknown value"
+        }
+
+        set {
+            title = newValue
+        }
+    }
+
+    public var wrappedSubtitle: String {
+        get {
+            self.subtitle ?? "Unknown value"
+        }
+
+        set {
+            subtitle = newValue
+        }
+    }
+}
+
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate), selectedPlace: .constant(MKPointAnnotation.example), showingPlaceDetails: .constant(false), annotations: [MKPointAnnotation.example])
