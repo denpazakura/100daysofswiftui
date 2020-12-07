@@ -17,7 +17,7 @@ struct ContentView: View {
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
     @State private var showingEditScreen = false
-    
+        
     var body: some View {
         ZStack {
             MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
@@ -31,21 +31,16 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        let newLocation = CodableMKPointAnnotation()
-                        newLocation.title = "Example location"
-                        newLocation.coordinate = self.centerCoordinate
-                        self.locations.append(newLocation)
-                        self.selectedPlace = newLocation
-                        self.showingEditScreen = true
+                        createLocation()
                     }) {
                         Image(systemName: "plus")
+                            .padding()
+                            .background(Color.black.opacity(0.75))
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .clipShape(Circle())
+                            .padding(.trailing)
                     }
-                    .padding()
-                    .background(Color.black.opacity(0.75))
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .clipShape(Circle())
-                    .padding(.trailing)
                 }
             }
         }.onAppear(perform: loadData)
@@ -120,6 +115,15 @@ private extension ContentView {
         } catch {
             print("Unable to save data.")
         }
+    }
+    
+    func createLocation() {
+        let newLocation = CodableMKPointAnnotation()
+        newLocation.title = "Example location"
+        newLocation.coordinate = self.centerCoordinate
+        self.locations.append(newLocation)
+        self.selectedPlace = newLocation
+        self.showingEditScreen = true
     }
 }
 
