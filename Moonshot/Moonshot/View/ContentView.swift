@@ -15,16 +15,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(dataProvider.missions()) { mission in
-                NavigationLink(destination: MissionView(mission: mission, astronauts: self.dataProvider.astronauts(), dataProvider: self.dataProvider)) {
+                NavigationLink(destination: MissionView(mission: mission, astronauts: dataProvider.astronauts(), dataProvider: dataProvider)) {
                     Image(mission.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 44, height: 44)
-
+                    
                     VStack(alignment: .leading) {
                         Text(mission.displayName)
                             .font(.headline)
                         Text(mission.formattedLaunchDate)
+                            .accessibility(label: Text(""))
+                            .accessibility(value: Text(mission.crewAccessibilityText(astronauts: dataProvider.astronauts())))
                     }
                 }
             }
