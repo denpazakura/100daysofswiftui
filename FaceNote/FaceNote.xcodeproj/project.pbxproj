@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1362BB42589745E00FF9848 /* CoreDataPerson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1362BB22589745E00FF9848 /* CoreDataPerson+CoreDataClass.swift */; };
+		A1362BB52589745E00FF9848 /* CoreDataPerson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1362BB32589745E00FF9848 /* CoreDataPerson+CoreDataProperties.swift */; };
+		A1362BB9258974E400FF9848 /* CoreDataPersonQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1362BB8258974E400FF9848 /* CoreDataPersonQuery.swift */; };
 		A1E305C025881671007974A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E305BF25881671007974A4 /* AppDelegate.swift */; };
 		A1E305C225881671007974A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E305C125881671007974A4 /* SceneDelegate.swift */; };
 		A1E305C425881671007974A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E305C325881671007974A4 /* ContentView.swift */; };
@@ -14,11 +17,12 @@
 		A1E305C925881673007974A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E305C825881673007974A4 /* Assets.xcassets */; };
 		A1E305CC25881673007974A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E305CB25881673007974A4 /* Preview Assets.xcassets */; };
 		A1E305CF25881673007974A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E305CD25881673007974A4 /* LaunchScreen.storyboard */; };
-		A1E305D925881858007974A4 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E305D725881858007974A4 /* Person+CoreDataClass.swift */; };
-		A1E305DA25881858007974A4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E305D825881858007974A4 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1362BB22589745E00FF9848 /* CoreDataPerson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataPerson+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A1362BB32589745E00FF9848 /* CoreDataPerson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataPerson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1362BB8258974E400FF9848 /* CoreDataPersonQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersonQuery.swift; sourceTree = "<group>"; };
 		A1E305BC25881671007974A4 /* FaceNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E305BF25881671007974A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E305C125881671007974A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +32,6 @@
 		A1E305CB25881673007974A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1E305CE25881673007974A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1E305D025881673007974A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1E305D725881858007974A4 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A1E305D825881858007974A4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +88,9 @@
 		A1E305DC25881866007974A4 /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				A1E305D725881858007974A4 /* Person+CoreDataClass.swift */,
-				A1E305D825881858007974A4 /* Person+CoreDataProperties.swift */,
+				A1362BB22589745E00FF9848 /* CoreDataPerson+CoreDataClass.swift */,
+				A1362BB32589745E00FF9848 /* CoreDataPerson+CoreDataProperties.swift */,
+				A1362BB8258974E400FF9848 /* CoreDataPersonQuery.swift */,
 			);
 			path = CoreDataModel;
 			sourceTree = "<group>";
@@ -164,10 +167,11 @@
 			files = (
 				A1E305C025881671007974A4 /* AppDelegate.swift in Sources */,
 				A1E305C225881671007974A4 /* SceneDelegate.swift in Sources */,
-				A1E305DA25881858007974A4 /* Person+CoreDataProperties.swift in Sources */,
-				A1E305D925881858007974A4 /* Person+CoreDataClass.swift in Sources */,
+				A1362BB9258974E400FF9848 /* CoreDataPersonQuery.swift in Sources */,
 				A1E305C725881671007974A4 /* FaceNote.xcdatamodeld in Sources */,
+				A1362BB52589745E00FF9848 /* CoreDataPerson+CoreDataProperties.swift in Sources */,
 				A1E305C425881671007974A4 /* ContentView.swift in Sources */,
+				A1362BB42589745E00FF9848 /* CoreDataPerson+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
