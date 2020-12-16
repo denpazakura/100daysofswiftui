@@ -1,5 +1,5 @@
 //
-//  CoreDataPersonQuery.swift
+//  CoreDataPersonObject.swift
 //  FaceNote
 //
 //  Created by denazakura on 15/12/2020.
