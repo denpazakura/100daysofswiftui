@@ -2,7 +2,7 @@
 //  CoreDataPerson+CoreDataClass.swift
 //  FaceNote
 //
-//  Created by denpazakura on 15/12/2020.
+//  Created by denpazakura on 14/12/2020.
 //
 //
 
