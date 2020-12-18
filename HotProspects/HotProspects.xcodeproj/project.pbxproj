@@ -19,6 +19,8 @@
 		A10B460F258C0C7400DE78BE /* CustomEnvionment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B460B258C0C7400DE78BE /* CustomEnvionment.swift */; };
 		A10B4612258C0D1A00DE78BE /* DelayedUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4611258C0D1A00DE78BE /* DelayedUpdater.swift */; };
 		A10B4615258C0D5400DE78BE /* ImageInterpolation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4614258C0D5400DE78BE /* ImageInterpolation.swift */; };
+		A10B461F258D53BA00DE78BE /* ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B461E258D53BA00DE78BE /* ContextMenu.swift */; };
+		A10B4622258D549800DE78BE /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4621258D549800DE78BE /* LocalNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A10B460B258C0C7400DE78BE /* CustomEnvionment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEnvionment.swift; sourceTree = "<group>"; };
 		A10B4611258C0D1A00DE78BE /* DelayedUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedUpdater.swift; sourceTree = "<group>"; };
 		A10B4614258C0D5400DE78BE /* ImageInterpolation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterpolation.swift; sourceTree = "<group>"; };
+		A10B461E258D53BA00DE78BE /* ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenu.swift; sourceTree = "<group>"; };
+		A10B4621258D549800DE78BE /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +72,10 @@
 		A10B45F1258AC66700DE78BE /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
-				A10B4614258C0D5400DE78BE /* ImageInterpolation.swift */,
 				A10B4611258C0D1A00DE78BE /* DelayedUpdater.swift */,
-				A10B460B258C0C7400DE78BE /* CustomEnvionment.swift */,
-				A10B4608258C0C7400DE78BE /* ManualPublishing.swift */,
-				A10B4609258C0C7400DE78BE /* ResultType.swift */,
-				A10B460A258C0C7400DE78BE /* Tabs.swift */,
-				A10B45F2258AC66700DE78BE /* AppDelegate.swift */,
-				A10B45F4258AC66700DE78BE /* SceneDelegate.swift */,
-				A10B45F6258AC66700DE78BE /* ContentView.swift */,
+				A10B4625258D54C700DE78BE /* View */,
+				A10B461A258D526500DE78BE /* Environment */,
+				A10B461C258D527800DE78BE /* Scene */,
 				A10B45F8258AC66A00DE78BE /* Assets.xcassets */,
 				A10B45FD258AC66A00DE78BE /* LaunchScreen.storyboard */,
 				A10B4600258AC66A00DE78BE /* Info.plist */,
@@ -91,6 +90,37 @@
 				A10B45FB258AC66A00DE78BE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A10B461A258D526500DE78BE /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				A10B460B258C0C7400DE78BE /* CustomEnvionment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		A10B461C258D527800DE78BE /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A10B45F2258AC66700DE78BE /* AppDelegate.swift */,
+				A10B45F4258AC66700DE78BE /* SceneDelegate.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		A10B4625258D54C700DE78BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A10B4608258C0C7400DE78BE /* ManualPublishing.swift */,
+				A10B4609258C0C7400DE78BE /* ResultType.swift */,
+				A10B460A258C0C7400DE78BE /* Tabs.swift */,
+				A10B461E258D53BA00DE78BE /* ContextMenu.swift */,
+				A10B45F6258AC66700DE78BE /* ContentView.swift */,
+				A10B4621258D549800DE78BE /* LocalNotifications.swift */,
+				A10B4614258C0D5400DE78BE /* ImageInterpolation.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10B4622258D549800DE78BE /* LocalNotifications.swift in Sources */,
+				A10B461F258D53BA00DE78BE /* ContextMenu.swift in Sources */,
 				A10B460D258C0C7400DE78BE /* ResultType.swift in Sources */,
 				A10B4615258C0D5400DE78BE /* ImageInterpolation.swift in Sources */,
 				A10B460C258C0C7400DE78BE /* ManualPublishing.swift in Sources */,
