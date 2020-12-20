@@ -24,6 +24,7 @@
 		A10B4629258EAE5800DE78BE /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = A10B4628258EAE5800DE78BE /* SamplePackage */; };
 		A10B4634258EB0CE00DE78BE /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4633258EB0CE00DE78BE /* ProspectsView.swift */; };
 		A10B4637258EB13100DE78BE /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4636258EB13100DE78BE /* Prospect.swift */; };
+		A10B463C259001A300DE78BE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A10B463B259001A300DE78BE /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10B463C259001A300DE78BE /* CodeScanner in Frameworks */,
 				A10B4629258EAE5800DE78BE /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +151,7 @@
 			name = HotProspects;
 			packageProductDependencies = (
 				A10B4628258EAE5800DE78BE /* SamplePackage */,
+				A10B463B259001A300DE78BE /* CodeScanner */,
 			);
 			productName = HotProspects;
 			productReference = A10B45EF258AC66700DE78BE /* HotProspects.app */;
@@ -179,6 +182,7 @@
 			mainGroup = A10B45E6258AC66700DE78BE;
 			packageReferences = (
 				A10B4627258EAE5800DE78BE /* XCRemoteSwiftPackageReference "SamplePackage" */,
+				A10B463A259001A300DE78BE /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = A10B45F0258AC66700DE78BE /* Products */;
 			projectDirPath = "";
@@ -425,6 +429,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A10B463A259001A300DE78BE /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -432,6 +444,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A10B4627258EAE5800DE78BE /* XCRemoteSwiftPackageReference "SamplePackage" */;
 			productName = SamplePackage;
+		};
+		A10B463B259001A300DE78BE /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10B463A259001A300DE78BE /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

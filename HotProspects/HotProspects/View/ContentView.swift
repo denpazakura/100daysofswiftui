@@ -6,17 +6,36 @@
 //
 
 import SwiftUI
-import SamplePackage
 
 struct ContentView: View {
+    var prospects = Prospects()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            ProspectsView(filter: .none)
+                .tabItem {
+                    Image(systemName: "person.3")
+                    Text("Everyone")
+            }
+
+            ProspectsView(filter: .contacted)
+                .tabItem {
+                    Image(systemName: "checkmark.circle")
+                    Text("Contacted")
+            }
+
+            ProspectsView(filter: .uncontacted)
+                .tabItem {
+                    Image(systemName: "questionmark.diamond")
+                    Text("Uncontacted")
+            }
+        }
+        .environmentObject(prospects)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CustomEnvionment()
     }
 }

@@ -11,14 +11,25 @@ class Prospect: Identifiable, Codable {
     let id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
+    var date = Date()
     fileprivate(set) var isContacted = false
-    
 }
 
 class Prospects: ObservableObject {
-    @Published var people: [Prospect]
-    
+    static let saveKey = "SavedData"
+
+    @Published private(set) var people: [Prospect]
+
     init() {
         self.people = []
+    }
+
+    func add(_ prospect: Prospect) {
+        people.append(prospect)
+    }
+
+    func toggle(_ prospect: Prospect) {
+        objectWillChange.send()
+        prospect.isContacted.toggle()
     }
 }
