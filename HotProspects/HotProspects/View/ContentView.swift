@@ -29,6 +29,12 @@ struct ContentView: View {
                     Image(systemName: "questionmark.diamond")
                     Text("Uncontacted")
             }
+            
+            MeView()
+                .tabItem {
+                    Image(systemName: "person.crop.square")
+                    Text("Me")
+            }
         }
         .environmentObject(prospects)
     }

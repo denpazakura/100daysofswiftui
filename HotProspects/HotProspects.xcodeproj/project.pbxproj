@@ -25,6 +25,7 @@
 		A10B4634258EB0CE00DE78BE /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4633258EB0CE00DE78BE /* ProspectsView.swift */; };
 		A10B4637258EB13100DE78BE /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B4636258EB13100DE78BE /* Prospect.swift */; };
 		A10B463C259001A300DE78BE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A10B463B259001A300DE78BE /* CodeScanner */; };
+		A117692B259153DB009DBA6B /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117692A259153DB009DBA6B /* MeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A10B4621258D549800DE78BE /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 		A10B4633258EB0CE00DE78BE /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
 		A10B4636258EB13100DE78BE /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
+		A117692A259153DB009DBA6B /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				A10B4633258EB0CE00DE78BE /* ProspectsView.swift */,
 				A10B4621258D549800DE78BE /* LocalNotifications.swift */,
 				A10B4614258C0D5400DE78BE /* ImageInterpolation.swift */,
+				A117692A259153DB009DBA6B /* MeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A117692B259153DB009DBA6B /* MeView.swift in Sources */,
 				A10B4634258EB0CE00DE78BE /* ProspectsView.swift in Sources */,
 				A10B4622258D549800DE78BE /* LocalNotifications.swift in Sources */,
 				A10B461F258D53BA00DE78BE /* ContextMenu.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class Prospect: Identifiable, Codable {
-    let id = UUID()
+    var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
     var date = Date()
