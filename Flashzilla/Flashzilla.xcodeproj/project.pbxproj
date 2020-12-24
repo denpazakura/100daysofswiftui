@@ -13,6 +13,8 @@
 		A11769422593C6D9009DBA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11769412593C6D9009DBA6B /* Assets.xcassets */; };
 		A11769452593C6D9009DBA6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11769442593C6D9009DBA6B /* Preview Assets.xcassets */; };
 		A11769482593C6D9009DBA6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11769462593C6D9009DBA6B /* LaunchScreen.storyboard */; };
+		A117695125954C13009DBA6B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695025954C13009DBA6B /* TimerView.swift */; };
+		A117695425954CAB009DBA6B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695325954CAB009DBA6B /* NotificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A11769442593C6D9009DBA6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A11769472593C6D9009DBA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A11769492593C6D9009DBA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A117695025954C13009DBA6B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		A117695325954CAB009DBA6B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				A117693B2593C6D7009DBA6B /* AppDelegate.swift */,
 				A117693D2593C6D7009DBA6B /* SceneDelegate.swift */,
 				A117693F2593C6D7009DBA6B /* ContentView.swift */,
+				A117695025954C13009DBA6B /* TimerView.swift */,
 				A11769412593C6D9009DBA6B /* Assets.xcassets */,
 				A11769462593C6D9009DBA6B /* LaunchScreen.storyboard */,
 				A11769492593C6D9009DBA6B /* Info.plist */,
 				A11769432593C6D9009DBA6B /* Preview Content */,
+				A117695325954CAB009DBA6B /* NotificationView.swift */,
 			);
 			path = Flashzilla;
 			sourceTree = "<group>";
@@ -147,7 +153,9 @@
 			files = (
 				A117693C2593C6D7009DBA6B /* AppDelegate.swift in Sources */,
 				A117693E2593C6D7009DBA6B /* SceneDelegate.swift in Sources */,
+				A117695125954C13009DBA6B /* TimerView.swift in Sources */,
 				A11769402593C6D7009DBA6B /* ContentView.swift in Sources */,
+				A117695425954CAB009DBA6B /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
