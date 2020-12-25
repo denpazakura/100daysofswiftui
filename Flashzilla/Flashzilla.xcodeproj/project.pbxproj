@@ -15,6 +15,8 @@
 		A11769482593C6D9009DBA6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11769462593C6D9009DBA6B /* LaunchScreen.storyboard */; };
 		A117695125954C13009DBA6B /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695025954C13009DBA6B /* TimerView.swift */; };
 		A117695425954CAB009DBA6B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695325954CAB009DBA6B /* NotificationView.swift */; };
+		A117695725964B69009DBA6B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695625964B69009DBA6B /* Card.swift */; };
+		A117695A25964D78009DBA6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695925964D78009DBA6B /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A11769492593C6D9009DBA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A117695025954C13009DBA6B /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		A117695325954CAB009DBA6B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		A117695625964B69009DBA6B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A117695925964D78009DBA6B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		A117693A2593C6D7009DBA6B /* Flashzilla */ = {
 			isa = PBXGroup;
 			children = (
+				A117695625964B69009DBA6B /* Card.swift */,
 				A117693B2593C6D7009DBA6B /* AppDelegate.swift */,
 				A117693D2593C6D7009DBA6B /* SceneDelegate.swift */,
 				A117693F2593C6D7009DBA6B /* ContentView.swift */,
@@ -69,6 +74,7 @@
 				A11769492593C6D9009DBA6B /* Info.plist */,
 				A11769432593C6D9009DBA6B /* Preview Content */,
 				A117695325954CAB009DBA6B /* NotificationView.swift */,
+				A117695925964D78009DBA6B /* CardView.swift */,
 			);
 			path = Flashzilla;
 			sourceTree = "<group>";
@@ -151,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A117695A25964D78009DBA6B /* CardView.swift in Sources */,
 				A117693C2593C6D7009DBA6B /* AppDelegate.swift in Sources */,
+				A117695725964B69009DBA6B /* Card.swift in Sources */,
 				A117693E2593C6D7009DBA6B /* SceneDelegate.swift in Sources */,
 				A117695125954C13009DBA6B /* TimerView.swift in Sources */,
 				A11769402593C6D7009DBA6B /* ContentView.swift in Sources */,
