@@ -68,13 +68,13 @@
 				A117693B2593C6D7009DBA6B /* AppDelegate.swift */,
 				A117693D2593C6D7009DBA6B /* SceneDelegate.swift */,
 				A117693F2593C6D7009DBA6B /* ContentView.swift */,
+				A117695925964D78009DBA6B /* CardView.swift */,
 				A117695025954C13009DBA6B /* TimerView.swift */,
 				A11769412593C6D9009DBA6B /* Assets.xcassets */,
 				A11769462593C6D9009DBA6B /* LaunchScreen.storyboard */,
 				A11769492593C6D9009DBA6B /* Info.plist */,
 				A11769432593C6D9009DBA6B /* Preview Content */,
 				A117695325954CAB009DBA6B /* NotificationView.swift */,
-				A117695925964D78009DBA6B /* CardView.swift */,
 			);
 			path = Flashzilla;
 			sourceTree = "<group>";
