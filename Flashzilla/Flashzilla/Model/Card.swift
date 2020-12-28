@@ -5,7 +5,10 @@
 //  Created by denpazakura on 25/12/2020.
 //
 
-struct Card {
+import Foundation
+
+struct Card: Codable, Identifiable {
+    let id = UUID()
     let prompt: String
     let answer: String
 

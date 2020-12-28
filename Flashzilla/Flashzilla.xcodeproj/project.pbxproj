@@ -17,6 +17,11 @@
 		A117695425954CAB009DBA6B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695325954CAB009DBA6B /* NotificationView.swift */; };
 		A117695725964B69009DBA6B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695625964B69009DBA6B /* Card.swift */; };
 		A117695A25964D78009DBA6B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A117695925964D78009DBA6B /* CardView.swift */; };
+		A17B593D259A6E2700DD4288 /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B593C259A6E2700DD4288 /* EditCardView.swift */; };
+		A17B5940259A6F1B00DD4288 /* FlashzillaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B593F259A6F1B00DD4288 /* FlashzillaButton.swift */; };
+		A17B5943259A6F4200DD4288 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B5942259A6F4200DD4288 /* SettingsView.swift */; };
+		A17B5949259A70C900DD4288 /* HapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B5948259A70C900DD4288 /* HapticsView.swift */; };
+		A17B594E259A726100DD4288 /* RestartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B594D259A726100DD4288 /* RestartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		A117695325954CAB009DBA6B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		A117695625964B69009DBA6B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A117695925964D78009DBA6B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A17B593C259A6E2700DD4288 /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
+		A17B593F259A6F1B00DD4288 /* FlashzillaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaButton.swift; sourceTree = "<group>"; };
+		A17B5942259A6F4200DD4288 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A17B5948259A70C900DD4288 /* HapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView.swift; sourceTree = "<group>"; };
+		A17B594D259A726100DD4288 /* RestartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +74,14 @@
 		A117693A2593C6D7009DBA6B /* Flashzilla */ = {
 			isa = PBXGroup;
 			children = (
-				A117695625964B69009DBA6B /* Card.swift */,
+				A17B5946259A6F7800DD4288 /* Views */,
+				A17B5950259A736200DD4288 /* Model */,
 				A117693B2593C6D7009DBA6B /* AppDelegate.swift */,
 				A117693D2593C6D7009DBA6B /* SceneDelegate.swift */,
-				A117693F2593C6D7009DBA6B /* ContentView.swift */,
-				A117695925964D78009DBA6B /* CardView.swift */,
-				A117695025954C13009DBA6B /* TimerView.swift */,
 				A11769412593C6D9009DBA6B /* Assets.xcassets */,
 				A11769462593C6D9009DBA6B /* LaunchScreen.storyboard */,
 				A11769492593C6D9009DBA6B /* Info.plist */,
 				A11769432593C6D9009DBA6B /* Preview Content */,
-				A117695325954CAB009DBA6B /* NotificationView.swift */,
 			);
 			path = Flashzilla;
 			sourceTree = "<group>";
@@ -85,6 +92,30 @@
 				A11769442593C6D9009DBA6B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A17B5946259A6F7800DD4288 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A17B593F259A6F1B00DD4288 /* FlashzillaButton.swift */,
+				A117693F2593C6D7009DBA6B /* ContentView.swift */,
+				A117695925964D78009DBA6B /* CardView.swift */,
+				A117695025954C13009DBA6B /* TimerView.swift */,
+				A117695325954CAB009DBA6B /* NotificationView.swift */,
+				A17B5942259A6F4200DD4288 /* SettingsView.swift */,
+				A17B593C259A6E2700DD4288 /* EditCardView.swift */,
+				A17B5948259A70C900DD4288 /* HapticsView.swift */,
+				A17B594D259A726100DD4288 /* RestartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A17B5950259A736200DD4288 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A117695625964B69009DBA6B /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17B594E259A726100DD4288 /* RestartView.swift in Sources */,
+				A17B593D259A6E2700DD4288 /* EditCardView.swift in Sources */,
+				A17B5949259A70C900DD4288 /* HapticsView.swift in Sources */,
 				A117695A25964D78009DBA6B /* CardView.swift in Sources */,
 				A117693C2593C6D7009DBA6B /* AppDelegate.swift in Sources */,
 				A117695725964B69009DBA6B /* Card.swift in Sources */,
 				A117693E2593C6D7009DBA6B /* SceneDelegate.swift in Sources */,
+				A17B5943259A6F4200DD4288 /* SettingsView.swift in Sources */,
+				A17B5940259A6F1B00DD4288 /* FlashzillaButton.swift in Sources */,
 				A117695125954C13009DBA6B /* TimerView.swift in Sources */,
 				A11769402593C6D7009DBA6B /* ContentView.swift in Sources */,
 				A117695425954CAB009DBA6B /* NotificationView.swift in Sources */,
