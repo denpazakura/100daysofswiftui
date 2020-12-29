@@ -30,7 +30,6 @@ struct TimerView: View {
     private func variableStyleTimer() -> some View {
         VStack(alignment: .leading) {
             Text("Time: \(timeRemaining)")
-            // avoid jitter
             Text("Time: \(String(repeating: "0", count: String(timeRemaining).count))")
                 .hidden()
                 .frame(height: 0)
@@ -43,7 +42,6 @@ struct TimerView: View {
             ForEach(0..<ContentView.maxTimerDigits, id: \.self) { i in
                 VStack(alignment: .center) {
                     self.timerDigitText(for: i)
-                    // avoid jitter
                     Text("0").hidden().frame(height: 0)
                 }
             }
