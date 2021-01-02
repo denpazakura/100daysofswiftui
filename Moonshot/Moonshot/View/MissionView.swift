@@ -18,11 +18,18 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack {
-                    Image(self.mission.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
-                        .padding(.top)
+                    GeometryReader { imageGeometry in
+                        Image(self.mission.image)
+                            .resizable()
+                            .scaledToFit()
+                            .padding(.top)
+                            .frame(width: imageGeometry.size.width, height: imageGeometry.size.height)
+                            .scaleEffect(self.imageScaleFactor(geometry: geometry, imageGeometry: imageGeometry))
+                        
+                            .offset(x: 0, y: self.imageScaleFactor(geometry: geometry, imageGeometry: imageGeometry) * imageGeometry.size.height / 2)
+
+                    }
+                    .frame(height: geometry.size.width * 0.75)
                     
                     Text(self.mission.formattedLaunchDate)
                         .padding()
@@ -39,7 +46,6 @@ struct MissionView: View {
                                     .frame(width: 83, height: 60)
                                     .clipShape(Capsule())
                                     .overlay(Capsule().stroke(Color.primary, lineWidth: 1))
-                                
                                 VStack(alignment: .leading) {
                                     Text(crewMember.astronaut.name)
                                         .font(.headline)
@@ -65,6 +71,18 @@ struct MissionView: View {
         self.dataProvider = dataProvider
         
         self.astronauts = dataProvider.crew(for: mission) ?? [CrewMember]()
+    }
+}
+
+private extension MissionView {
+    func imageScaleFactor(geometry: GeometryProxy, imageGeometry: GeometryProxy) -> CGFloat {
+        let imagePosition = imageGeometry.frame(in: .global).minY
+        let safeAreaHeight = geometry.safeAreaInsets.top
+
+        return (safeAreaHeight - imagePosition) / 500
+        
+        
+    //    return 1 - ((imageGeometry.frame(in: .global).minY - geometry.safeAreaInsets.top) / 500)
     }
 }
 
