@@ -27,14 +27,21 @@ struct ContentView: View {
                     .padding()
                     .autocapitalization(.none)
                 
-                List(usedWords, id: \.self) { word in
-                    HStack {
-                        Image(systemName: "\(word.count).circle")
-                        Text(word)
+                GeometryReader { listProxy in
+                    List(self.usedWords, id: \.self) { word in
+                        GeometryReader { itemProxy in
+                            HStack {
+                                Image(systemName: "\(word.count).circle")
+                                Text(word)
+                            }
+                            .frame(width: itemProxy.size.width, alignment: .leading)
+                            .offset(x: self.getOffset(listGeometry: listProxy, itemGeometry: itemProxy), y: 0)
+                            .accessibilityElement(children: .ignore)
+                            .accessibility(label: Text("\(word), \(word.count) letters"))
+                        }
                     }
-                    .accessibilityElement(children: .ignore)
-                    .accessibility(label: Text("\(word), \(word.count) letters"))
                 }
+                
             }
             .navigationBarTitle(rootWord)
             .navigationBarItems(leading: Button("Start", action: {
@@ -85,6 +92,23 @@ private extension ContentView {
         errorTitle = title
         errorMessage = message
         showingError = true
+    }
+    
+    func getOffset(listGeometry: GeometryProxy, itemGeometry: GeometryProxy) -> CGFloat {
+        let listHeight = listGeometry.size.height
+        let listStart = listGeometry.frame(in: .global).minY
+        let itemStart = itemGeometry.frame(in: .global).minY
+
+        let itemPercent =  (itemStart - listStart) / listHeight * 100
+
+        let thresholdPercent: CGFloat = 60
+        let indent: CGFloat = 9
+
+        if itemPercent > thresholdPercent {
+            return (itemPercent - (thresholdPercent - 1)) * indent
+        }
+
+        return 0
     }
 }
 
