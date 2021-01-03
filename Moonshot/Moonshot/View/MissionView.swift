@@ -24,8 +24,7 @@ struct MissionView: View {
                             .scaledToFit()
                             .padding(.top)
                             .frame(width: imageGeometry.size.width, height: imageGeometry.size.height)
-                            .scaleEffect(self.imageScaleFactor(geometry: geometry, imageGeometry: imageGeometry))
-                        
+                            .scaleEffect(1 - self.imageScaleFactor(geometry: geometry, imageGeometry: imageGeometry))
                             .offset(x: 0, y: self.imageScaleFactor(geometry: geometry, imageGeometry: imageGeometry) * imageGeometry.size.height / 2)
 
                     }
@@ -81,8 +80,6 @@ private extension MissionView {
 
         return (safeAreaHeight - imagePosition) / 500
         
-        
-    //    return 1 - ((imageGeometry.frame(in: .global).minY - geometry.safeAreaInsets.top) / 500)
     }
 }
 
