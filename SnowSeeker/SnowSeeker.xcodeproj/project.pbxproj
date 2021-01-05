@@ -13,6 +13,10 @@
 		A17B5A5725A3983A00DD4288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17B5A5625A3983A00DD4288 /* Assets.xcassets */; };
 		A17B5A5A25A3983A00DD4288 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17B5A5925A3983A00DD4288 /* Preview Assets.xcassets */; };
 		A17B5A5D25A3983A00DD4288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17B5A5B25A3983A00DD4288 /* LaunchScreen.storyboard */; };
+		A17B5A6625A4C68C00DD4288 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B5A6525A4C68C00DD4288 /* Resort.swift */; };
+		A17B5A6925A4C8A200DD4288 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B5A6825A4C8A100DD4288 /* Bundle.swift */; };
+		A17B5A7125A4FAA000DD4288 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = A17B5A7025A4FAA000DD4288 /* resorts.json */; };
+		A17B5A7525A4FAFC00DD4288 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B5A7425A4FAFC00DD4288 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A17B5A5925A3983A00DD4288 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A17B5A5C25A3983A00DD4288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A17B5A5E25A3983A00DD4288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A17B5A6525A4C68C00DD4288 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
+		A17B5A6825A4C8A100DD4288 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		A17B5A7025A4FAA000DD4288 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
+		A17B5A7425A4FAFC00DD4288 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +64,12 @@
 		A17B5A4F25A3983700DD4288 /* SnowSeeker */ = {
 			isa = PBXGroup;
 			children = (
+				A17B5A6C25A4C8D000DD4288 /* Extension */,
+				A17B5A6525A4C68C00DD4288 /* Resort.swift */,
+				A17B5A7425A4FAFC00DD4288 /* WelcomeView.swift */,
 				A17B5A5025A3983700DD4288 /* AppDelegate.swift */,
 				A17B5A5225A3983700DD4288 /* SceneDelegate.swift */,
+				A17B5A7025A4FAA000DD4288 /* resorts.json */,
 				A17B5A5425A3983700DD4288 /* ContentView.swift */,
 				A17B5A5625A3983A00DD4288 /* Assets.xcassets */,
 				A17B5A5B25A3983A00DD4288 /* LaunchScreen.storyboard */,
@@ -73,6 +85,14 @@
 				A17B5A5925A3983A00DD4288 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A17B5A6C25A4C8D000DD4288 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A17B5A6825A4C8A100DD4288 /* Bundle.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +154,7 @@
 			files = (
 				A17B5A5D25A3983A00DD4288 /* LaunchScreen.storyboard in Resources */,
 				A17B5A5A25A3983A00DD4288 /* Preview Assets.xcassets in Resources */,
+				A17B5A7125A4FAA000DD4288 /* resorts.json in Resources */,
 				A17B5A5725A3983A00DD4288 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A17B5A5125A3983700DD4288 /* AppDelegate.swift in Sources */,
+				A17B5A7525A4FAFC00DD4288 /* WelcomeView.swift in Sources */,
 				A17B5A5325A3983700DD4288 /* SceneDelegate.swift in Sources */,
+				A17B5A6625A4C68C00DD4288 /* Resort.swift in Sources */,
+				A17B5A6925A4C8A200DD4288 /* Bundle.swift in Sources */,
 				A17B5A5525A3983700DD4288 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
