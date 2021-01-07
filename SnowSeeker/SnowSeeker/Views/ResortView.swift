@@ -11,18 +11,31 @@ struct ResortView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
     
     @EnvironmentObject var favorites: Favorites
-
+    
     @State private var selectedFacility: Facility?
-
+    
     let resort: Resort
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Image(decorative: resort.id)
-                    .resizable()
-                    .scaledToFit()
-                
+                GeometryReader { geomtry in
+                    Image(decorative: resort.id)
+                        .resizable()
+                        .scaledToFit()
+                        .overlay(
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Spacer()
+                                    Text("Photo credits: \(resort.imageCredit)")
+                                        .font(.caption)
+                                        .foregroundColor(Color.black)
+                                        .background(Color.white.opacity(0.8))
+                                }
+                            }
+                        )
+                }
                 Group {
                     Text(resort.description)
                         .padding(.vertical)
@@ -44,9 +57,9 @@ struct ResortView: View {
                     
                     Text("Facilities")
                         .font(.headline)
-//
-//                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
-//                        .padding(.vertical)
+                    //
+                    //                    Text(ListFormatter.localizedString(byJoining: resort.facilities))
+                    //                        .padding(.vertical)
                     
                     HStack {
                         ForEach(resort.facilityTypes) { facility in
